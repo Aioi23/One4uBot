@@ -93,9 +93,10 @@ async def mention_afk(mention):
             if mention.sender_id not in USERS:
                 if AFKREASON:
                     await mention.reply(
-                        "I'm AFK right now."
+                        "My master AFK right now."
                         f"\nBecause `{AFKREASON}`."
                         f"\nAFK since: {afk_str}"
+			"\nPlease leave a message"
                     )
                 else:
                     await mention.reply(str(choice(AFKSTR)))
@@ -105,9 +106,10 @@ async def mention_afk(mention):
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
                         await mention.reply(
-                            "I'm still AFK."
+                            "My master still AFK."
                             f"\nReason: `{AFKREASON}`."
                             f"\nAFK from: {afk_str}"
+			    "\nPlease leave a message"
                         )
                     else:
                         await mention.reply(str(choice(AFKSTR)))
@@ -174,9 +176,10 @@ async def afk_on_pm(sender):
             if sender.sender_id not in USERS:
                 if AFKREASON:
                     await sender.reply(
-                        "I'm AFK right now."
+                        "My master AFK right now."
                         f"\nReason: `{AFKREASON}`."
                         f"\nAFK since: {afk_str}"
+			"\nPlease leave a message"
                     )
                 else:
                     await sender.reply(str(choice(AFKSTR)))
@@ -186,9 +189,10 @@ async def afk_on_pm(sender):
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
                         await sender.reply(
-                            "I'm still AFK."
+                            "My master still AFK."
                             f"\nReason: `{AFKREASON}`."
                             f"\nAFK from: {afk_str}"
+			    "\nPlease leave a message"
                         )
                     else:
                         await sender.reply(str(choice(AFKSTR)))
@@ -215,9 +219,9 @@ async def set_afk(afk_e):
     afk_start = start1.replace(microsecond=0)
     if string:
         AFKREASON = string
-        await afk_e.edit("Going AFK!" f"\nReason: `{string}`")
+        await afk_e.edit("My master is Going AFK!" f"\nReason: `{string}`")
     else:
-        await afk_e.edit("Going AFK!")
+        await afk_e.edit("My master is Going AFK!")
     if BOTLOG:
         await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\nYou went AFK!")
     ISAFK = True
@@ -239,7 +243,7 @@ async def type_afk_is_not_true(notafk):
     afk_end = not_afk.replace(microsecond=0)
     if ISAFK:
         ISAFK = False
-        msg = await notafk.respond("I'm no longer AFK.")
+        msg = await notafk.respond("My master is no longer AFK.")
         await sleep(2)
         await msg.delete()
         if BOTLOG:
