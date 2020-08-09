@@ -201,7 +201,7 @@ async def amireallyalive(alive):
               "`⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷⊶⊷⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶`\n"
               f"•  ⚙️ `Telethon       : v{version.__version__} `\n"
               f"•  🐍 `Python         : v{python_version()} `\n"
-              f"•  👤 `UMy master      :`  {DEFAULTUSER} \n"
+              f"•  👤 `Uy master      :`  {DEFAULTUSER} \n"
               "`----------------------------------`\n"
               f"•  💻 `Running on     : {repo.active_branch.name} `\n"
               f"•  🗃 `Loaded modules : {len(modules)} `\n"
