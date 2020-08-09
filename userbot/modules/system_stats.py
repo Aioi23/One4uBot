@@ -203,9 +203,9 @@ async def amireallyalive(alive):
               f"•  🐍 `Python         : v{python_version()} `\n"
               f"•  👤 `User           :  {DEFAULTUSER} \n"
               "`----------------------------------`\n"
-              f"•  🗃 `Loaded modules : {len(modules)} `\n"
-              f"•  🧸 `On version     : v{USERBOT_VERSION} `\n"
-              "`⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷⊶⊷⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶`")
+              f"•  `Loaded modules : {len(modules)} `\n"
+              f"•   `On version     : v{USERBOT_VERSION} `\n"
+              "`⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷⊶⊷⊶⊶⊶⊶⊶⊶⊶⊶⊶`")
     if ALIVE_LOGO:
         logo = ALIVE_LOGO
         await bot.send_file(alive.chat_id, logo, caption=output)
