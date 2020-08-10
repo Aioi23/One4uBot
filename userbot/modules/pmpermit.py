@@ -17,8 +17,8 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 UNAPPROVED_MSG = (
-    "`Sorry, My master haven't approved you.`\n"
-    "`⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶`\n"
+    "`My master haven't approved you`\n"
+    "`⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶`\n"
     "`• Please wait for him to look in`\n"
     "`• Please don't spam`\n"
     "`• Thanks for being patient.`")
@@ -70,8 +70,11 @@ async def permitpm(event):
 
                 if COUNT_PM[event.chat_id] > 4:
                     await event.respond(
-                        "`I have notice you before.`\n"
-                        "`You have been BLOCKED and reported as SPAM, wait a minute until My master online.`"
+                        "`I have notice you before`\n"
+			"`⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶`\n"
+                        "`• You have been BLOCKED`\n"
+			"`• You reported as SPAM`\n"
+			"`• Wait until My master online.`"
                     )
 
                     try:

@@ -97,7 +97,7 @@ async def kang(args):
                 emoji = splat[1]
 
         packname = f"a{user.id}_by_{user.username}_{pack}"
-        packnick = f"@{user.username}'s kang pack Vol.{pack}"
+        packnick = f"@{user.username} {pack}"
         cmd = '/newpack'
         file = io.BytesIO()
 
@@ -125,7 +125,7 @@ async def kang(args):
                 while "120" in x.text:
                     pack += 1
                     packname = f"a{user.id}_by_{user.username}_{pack}"
-                    packnick = f"@{user.username}'s kang pack Vol.{pack}"
+                    packnick = f"@{user.username} {pack}"
                     await args.edit("`Switching to Pack " + str(pack) +
                                     " due to insufficient space`")
                     await conv.send_message(packname)
@@ -238,7 +238,7 @@ async def kang(args):
                 await bot.send_read_acknowledge(conv.chat_id)
 
         await args.edit(f"`Now, it's yours`\
-            \nPlease check [here](t.me/addstickers/{packname}, Master)",
+            \nPlease check [here](t.me/addstickers/{packname})",
                         parse_mode='md')
 
 
