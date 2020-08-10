@@ -17,11 +17,11 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 UNAPPROVED_MSG = (
-    "`Hey! Sorry, I haven't approved you to PM yet.`\n"
-    "`Please wait for me to look in`\n"
-    "`Until then, please don't spam my PM..`\n"
-    "`Thank you for being patient.`\n\n"
-    "`*This is an automated message`")
+    "`Sorry, My master haven't approved you.`\n"
+    "`⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶`\n"
+    "`• Please wait for him to look in`\n"
+    "`• Please don't spam`\n"
+    "`• Thanks for being patient.`")
 # =================================================================
 
 
@@ -70,8 +70,8 @@ async def permitpm(event):
 
                 if COUNT_PM[event.chat_id] > 4:
                     await event.respond(
-                        "`I didn't like you spamming my PM.`\n"
-                        "`You have been BLOCKED and reported as SPAM, wait a minute until i online.`"
+                        "`I have notice you before.`\n"
+                        "`You have been BLOCKED and reported as SPAM, wait a minute until My master online.`"
                     )
 
                     try:
@@ -269,7 +269,7 @@ async def unblockpm(unblock):
         replied_user = await unblock.client.get_entity(reply.from_id)
         name0 = str(replied_user.first_name)
         await unblock.client(UnblockRequest(replied_user.id))
-        await unblock.edit("`You has been unblocked.`")
+        await unblock.edit("`You has been unblocked, please don't do it again.`")
 
     if BOTLOG:
         await unblock.client.send_message(
